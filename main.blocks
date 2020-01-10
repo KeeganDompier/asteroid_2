@@ -1,0 +1,35 @@
+<xml xmlns="https://developers.google.com/blockly/xml"><variables><variable type="KIND_SpriteKind" id="4QZKmCLM-=Qi1nOGC$~!">Player</variable><variable type="KIND_SpriteKind" id="vE}2v@vU-B-#UB/(nP)%">Projectile</variable><variable type="KIND_SpriteKind" id="e-c`q`8dL%FT!)IaG5P4">Food</variable><variable type="KIND_SpriteKind" id="kw*MM3w],/9|.XQ#ORk9">Enemy</variable><variable id="G$cA{+prWl;}QRCRUY^.">Hero</variable><variable id="*2f[aXl`H#/v9z+@t3gb">mySprite</variable><variable id="T;?U3fcXGi%cLRqwATUF">projectile</variable></variables><block type="function_definition" x="310" y="-150"><mutation name="win" functionid="76$|:nV0?/D_Sn[+!L6E"/><field name="function_name"/><statement name="STACK"><block type="controls_if"><value name="IF0"><shadow type="logic_boolean"><field name="BOOL">TRUE</field></shadow><block type="logic_compare"><field name="OP">GTE</field><value name="A"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="hudScore"/></value><value name="B"><shadow type="math_number"><field name="NUM">25</field></shadow></value></block></value><statement name="DO0"><block type="gameOver"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="1" _input_init="true"></mutation><field name="effect">effects.smiles</field><value name="win"><shadow type="toggleWinLose"><field name="win">true</field></shadow></value></block></statement></block></statement></block><block type="function_definition" x="159" y="89"><mutation name="score" functionid="kiFFfDZei_P6LAu/PaMk"/><field name="function_name">score</field><statement name="STACK"><block type="hudChangeScoreBy"><value name="value"><shadow type="math_number"><field name="NUM">1</field></shadow></value></block></statement></block><block type="function_definition" x="410" y="110"><mutation name="projectile" functionid="Ko7^biP)o?!]/jIv_(zg"/><field name="function_name">projectile</field><statement name="STACK"><block type="variables_set"><field name="VAR" id="T;?U3fcXGi%cLRqwATUF">projectile</field><value name="VALUE"><shadow xmlns="http://www.w3.org/1999/xhtml" type="math_number"><field name="NUM">0</field></shadow><block type="spritescreateprojectilefromside"><value name="img"><shadow type="screen_image_picker"><field name="img">img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . 5 5 . . . . . . . 
+. . . . . . 5 5 5 5 . . . . . . 
+. . . . . 5 5 5 5 5 5 . . . . . 
+. . . . . 7 7 7 7 7 7 . . . . . 
+. . . . . 7 5 7 7 5 7 . . . . . 
+. . . . . 7 7 7 7 7 7 . . . . . 
+. . . . . 7 5 5 5 5 7 . . . . . 
+. . . . . . 7 7 7 7 . . . . . . 
+. 7 7 7 7 7 . 7 7 . 7 7 7 7 7 . 
+. . . . . . 7 7 7 7 . . . . . . 
+. . . 7 . . . 7 7 . . . 7 . . . 
+. . . . 7 7 7 7 7 7 7 7 . . . . 
+`</field></shadow></value><value name="vx"><shadow type="spriteSpeedPicker"><field name="speed">0</field></shadow></value><value name="vy"><shadow type="spriteSpeedPicker"><field name="speed">0</field></shadow></value></block></value></block></statement></block><block type="function_definition" x="10" y="296"><mutation name="overlap" functionid="]IW1aYU#6mkr3R+TUry_"/><field name="function_name">overlap</field><statement name="STACK"><block type="gameOver"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="1" _input_init="true"></mutation><field name="effect">effects.dissolve</field><value name="win"><shadow type="toggleWinLose"><field name="win">false</field></shadow></value></block></statement></block><block type="function_definition" x="830" y="310"><mutation name="hero" functionid="3UPKt5$tfx*A?m`Kk$Uk"/><field name="function_name">hero</field><statement name="STACK"><block type="variables_set"><field name="VAR" id="G$cA{+prWl;}QRCRUY^.">Hero</field><value name="VALUE"><shadow xmlns="http://www.w3.org/1999/xhtml" type="math_number"><field name="NUM">0</field></shadow><block type="spritescreate"><value name="img"><shadow type="screen_image_picker"><field name="img">img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . 7 7 7 7 . . . . . . 
+. . . 7 7 7 8 7 7 8 7 7 7 . . . 
+. . . . 7 7 7 7 7 7 7 7 . . . . 
+. . . . 7 8 8 8 8 8 8 7 . . . . 
+. . e . . 7 7 7 7 7 7 . . . . . 
+. e e . . . . 8 8 . . . . . . . 
+. e e 8 8 8 8 8 8 8 8 8 8 . . . 
+. e e . . . . 8 8 . . . . . . . 
+. . e . . . . 8 8 . . . . . . . 
+. . . . . . 8 8 8 8 . . . . . . 
+`</field></shadow></value><value name="kind"><shadow type="spritekind"><field name="MEMBER">Player</field></shadow></value></block></value><next><block type="spritesetpos"><value name="sprite"><block type="variables_get"><field name="VAR" id="G$cA{+prWl;}QRCRUY^.">Hero</field></block></value><value name="x"><shadow type="positionPicker"><field name="index">80</field></shadow></value><value name="y"><shadow type="positionPicker"><field name="index">60</field></shadow></value><next><block type="game_control_sprite"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="2" _input_init="true"></mutation><value name="sprite"><block type="variables_get"><field name="VAR" id="G$cA{+prWl;}QRCRUY^.">Hero</field></block></value><value name="vx"><shadow type="math_number"><field name="NUM">100</field></shadow></value><value name="vy"><shadow type="math_number"><field name="NUM">0</field></shadow></value></block></next></block></next></block></statement></block><block type="spritesoverlap" x="30" y="430"><value name="HANDLER_DRAG_PARAM_sprite"><shadow type="argument_reporter_custom"><mutation typename="Sprite"/><field name="VALUE">sprite</field></shadow></value><value name="kind"><shadow type="spritekind"><field name="MEMBER">Player</field></shadow></value><value name="HANDLER_DRAG_PARAM_otherSprite"><shadow type="argument_reporter_custom"><mutation typename="Sprite"/><field name="VALUE">otherSprite</field></shadow></value><value name="otherKind"><shadow type="spritekind"><field name="MEMBER">Projectile</field></shadow></value><statement name="HANDLER"><block type="function_call"><mutation name="overlap" functionid="]IW1aYU#6mkr3R+TUry_"/></block></statement></block><block type="pxt-on-start" x="0" y="572"><statement name="HANDLER"><block type="function_call"><mutation name="hero" functionid="3UPKt5$tfx*A?m`Kk$Uk"/></block></statement></block><block type="gameinterval" x="350" y="570"><value name="period"><shadow type="timePicker"><field name="ms">200</field></shadow></value><statement name="HANDLER"><block type="function_call"><mutation name="projectile" functionid="Ko7^biP)o?!]/jIv_(zg"/><next><block type="function_call"><mutation name="score" functionid="kiFFfDZei_P6LAu/PaMk"/><next><block type="function_call"><mutation name="win" functionid="76$|:nV0?/D_Sn[+!L6E"/></block></next></block></next></block></statement></block></xml>
